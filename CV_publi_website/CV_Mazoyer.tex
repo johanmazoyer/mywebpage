@@ -1,4 +1,4 @@
-% LaTeX file for resume 
+% LaTeX file for resume
 % This file uses the resume document class (res.cls)
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -13,6 +13,9 @@
 % \usepackage{graphicx}
 % \graphicspath{‎{}}
 
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
 
 
 \usepackage[framemethod=tikz]{mdframed}
@@ -21,7 +24,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 \usepackage{wrapfig}
 
 \usepackage{titlesec}
-\titleformat{\section}[block]{\large}{\textbf{\thesection}}{1em}{ \bfseries} 
+\titleformat{\section}[block]{\large}{\textbf{\thesection}}{1em}{ \bfseries}
 \titleformat{\subsection}[block]{\hspace{0.6em}}{\textbf{\thesubsection}}{1em}{\bfseries}
 
 \definecolor{blanc}{rgb}{1,1,1}
@@ -35,10 +38,12 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 \pagestyle{fancy}     % set pagestyle for document
 \rhead{} % put text in header (right side)
 
-\rhead{\textcolor{Gray}{ \thepage/11}}
+\rhead{\textcolor{Gray}{ \thepage/10}}
 
-\chead{\textcolor{Gray}{}} % put text in header (right side)  
+\chead{\textcolor{Gray}{}} % put text in header (right side)
 \cfoot{}
+
+\lfoot{\textcolor{Gray}{CV last update: \monthyeardate\today}}
 
 \setlength{\parindent}{0pt}
 
@@ -52,8 +57,8 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 
 \begin{document}
 \lhead[]{}
-\textcolor{blanc}{.}
-\vspace{-1.cm}
+% \textcolor{blanc}{.}
+% \vspace{-1.cm}
 
 \begin{huge}
 \noindent\textbf{Johan MAZOYER}
@@ -68,63 +73,66 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% SECTION RESEARCH EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-1.2cm} 
-\textcolor{RoyalBlue}{\section{\large RESEARCH POSITIONS} 
+\vspace{-1cm}
+\textcolor{RoyalBlue}{\section{\large RESEARCH POSITIONS}
 \vspace{-0.35cm}\hrule}
 \vspace{0.4cm}
 
+\textbf{Chargé de recherche CNRS} -- \href{http://www.obspm.fr/?lang=en}{\textbf{LESIA/Paris Observatory}} \hfill       { Paris, FR} \\
+{\small High contrast imaging on the Decadal Survey Testbed}  \hfill  	 { \bf 2020 - present}\\
+
+
 \textbf{Carl Sagan Postdoctoral Fellow} -- \href{https://www.jpl.nasa.gov/}{\textbf{Jet Propulsion Laboratory}} \hfill       { Pasadena, CA} \\
-{\small High contrast imaging on the Decadal Survey Testbed}  \hfill  	 { \bf 2018 - Present}\\
+{\small High contrast imaging on the Decadal Survey Testbed}  \hfill  	 { \bf 2018 - 2019}\\
+
 
 \textbf{Postdoctoral Researcher} -- \href{http://physics-astronomy.jhu.edu/}{\textbf{Johns Hopkins University}} \hfill       { Baltimore, MD} \\
 {\small Gemini planet imager collaboration: debris disk analysis}  \hfill  	 { \bf 2016 - 2018}\\
 
- 
-\vspace{-0.1cm}
+
 \textbf{Postdoctoral Researcher} -- {\href{http://www.stsci.edu}{\textbf{Space Telescope Science Institute}}} \hfill       { Baltimore, MD} \\
 {\small Active correction for coronagraphy}  \hfill  	 { \bf 2014 - 2016}\\
 
- \vspace{-0.1cm}
-\textbf{CNES Graduate Student Fellow} --  {\href{http://www.obspm.fr/?lang=en}{\textbf{LESIA/Paris Observatory}}} \hfill       {Paris, Fr} \\
+
+\textbf{CNES Graduate Student Fellow} -- \href{http://www.obspm.fr/?lang=en}{\textbf{LESIA/Paris Observatory}} \hfill       {Paris, FR} \\
 {\small Advisors: Pierre Baudoz \& Gérard Rousset }\hfill  	 { \bf 2011 - 2014}\\
 
 
-\vspace{-0.1cm}
-{\small \textbf{Visiting Research Student} -- \href{http://www.lanl.gov/}{\textbf{Los Alamos National Laboratory} } \hfill    	Los Alamos, NM\\
-MSL/ChemCam Collaboration (Roger Wiens) \hfill  		 \textbf{Summer 2011}\\
+% \vspace{-0.1cm}
+% {\small \textbf{Visiting Research Student} -- \href{http://www.lanl.gov/}{\textbf{Los Alamos National Laboratory} } \hfill    	Los Alamos, NM\\
+% MSL/ChemCam Collaboration (Roger Wiens) \hfill  		 \textbf{Summer 2011}\\
 
-\vspace{-0.1cm}
-\textbf{Visiting Research Student} -- \href{http://www.irap.omp.eu/en}{\textbf{IRAP}} \hfill    	Toulouse, Fr\\
-MSL/ChemCam Collaboration (Olivier Gasnault \& Sylvestre Maurice) \hfill		  \textbf{Spring 2011}}\\
+% \vspace{-0.1cm}
+% \textbf{Visiting Research Student} -- \href{http://www.irap.omp.eu/en}{\textbf{IRAP}} \hfill    	Toulouse, Fr\\
+% MSL/ChemCam Collaboration (Olivier Gasnault \& Sylvestre Maurice) \hfill		  \textbf{Spring 2011}}\\
 
-%\vspace{-0.35cm}  
+%\vspace{-0.35cm}
 %{\small \textbf{CNES} (French space agency) \hfill    	Toulouse, France\\
 %\textit{Master student} ; Pleiades satellites \hfill  		 {\bf March -- July 2010}}\\
 %
 %\vspace{-0.35cm}
 %{\small\textbf{Le Relais} (French NGO) \hfill    		  Koudougou, Burkina Faso\\
 %Humanitarian work\hfill  		  {\bf July -- Sept. 2009}}	\\
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% SECTION EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-\vspace{-0.45cm} 
-\textcolor{RoyalBlue}{\section{\large EDUCATION} 
+
+\vspace{-0.3cm}
+\textcolor{RoyalBlue}{\section{\large EDUCATION}
 \vspace{-0.35cm}\hrule}
 \vspace{0.4cm}
 
 PhD in \textbf{Astronomy \& Astrophysics} -- \href{https://www.univ-paris-diderot.fr/}{\textbf{\textbf{Universit\'e Paris Diderot} }} \hfill  { \bf 2014}\\
-{ \small \it High-contrast direct imaging of exoplanets and circumstellar disks: from the SCC to NICI}\\
 
-\vspace{-0.1cm} 
+\vspace{-0.1cm}
 Master in \textbf{Astronomy \& Astrophysics}  -- \href{http://www.obs-mip.fr/en}{\textbf{\textbf{Observatoire Midi--Pyr\' en\' ees} }} \hfill  { \bf 2011} \\
 
-\vspace{-0.1cm} 
+\vspace{-0.1cm}
 Master in \textbf{Space engineering \& Imaging techniques} -- \href{https://www.isae-supaero.fr/en/}{\textbf{\textbf{ISAE Supaero} }} \hfill  { \bf 2011} \\
 
-\vspace{-0.1cm} 
-Bachelor in \textbf{Physics \& Computer Engineering} -- \href{http://www.polytechnique.edu/en/}{\textbf{\textbf{Ecole polytechnique} }}  \hfill    { \bf 2010 }\\ 
+\vspace{-0.1cm}
+Bachelor in \textbf{Physics \& Computer Engineering} -- \href{http://www.polytechnique.edu/en/}{\textbf{\textbf{Ecole polytechnique} }}  \hfill    { \bf 2010 }\\
 
 
 
@@ -134,57 +142,57 @@ Bachelor in \textbf{Physics \& Computer Engineering} -- \href{http://www.polytec
 %%%%%% SECTION AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{-0.45cm} 
-\textcolor{RoyalBlue}{\section{\large GRANTS \& AWARDS} 
+\vspace{-0.3cm}
+\textcolor{RoyalBlue}{\section{\large GRANTS \& AWARDS}
 \vspace{-0.45cm}\hrule}
 \vspace{0.4cm}
 \textbf{Carl Sagan Fellowship} (\href{http://www.stsci.edu/stsci-research/fellowships/nasa-hubble-fellowship-program}{NASA Hubble Fellowship Program}) \hfill   \textbf{2018}\\ %- \$300K/3 yrs
 
-\vspace{-0.15cm} 
+\vspace{-0.1cm}
 Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/articles/aa/abs/2014/04/contents/contents.html}{Volume 564}) \hfill  \textbf{2014}\\
 
-\vspace{-0.15cm} 
+\vspace{-0.1cm}
 \textbf{Outstanding Presentation Award} (CNES fellow symposium JC$^2$) \hfill   \textbf{2013}\\
 
-\vspace{-0.15cm} 
+\vspace{-0.1cm}
 \textbf{CNES Doctoral Research Fellowship} (\href{https://cnes.fr/en/web/CNES-en/7430-research-grants.php}{French space agency})  \hfill   \textbf{2011}\\ %- \$66K/3 yrs
 
-\vspace{-0.15cm} 
-\textbf{Ecole Polytechnique Scholarship} - \$48K/4 yrs   \hfill   \textbf{2007}\\
+\vspace{-0.1cm}
+\textbf{Ecole Polytechnique Scholarship}   \hfill   \textbf{2007}\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% SECTION VULGARISATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage 
+\newpage
 \textcolor{White}{.}
 %\lhead{\textcolor{Gray}{J. MAZOYER}}
-\vspace{-1.5cm} 
-\textcolor{RoyalBlue}{\section{\large POPULAR SCIENCE} 
+\vspace{-1.5cm}
+\textcolor{RoyalBlue}{\section{\large POPULAR SCIENCE}
 \vspace{-0.35cm}\hrule}
-\vspace{0.6cm}  
+\vspace{0.6cm}
 \begin{wrapfigure}{l}{0.27\textwidth}
 \vspace{-0.95cm}
-\begin{mybox}  
+\begin{mybox}
     \includegraphics[width=1.\textwidth]{figures_CV/PodcastScience.png}
  \end{mybox}
 \vspace{-1.1cm}
 \end{wrapfigure}
 \textbf{Podcast Science}: I am running \href{http://www.podcastscience.fm}{\textbf{PodcastScience.fm}}, a \textbf{general science program}, airing every Wednesdays, in french. This podcast is listened by 10'000 to 20'000 listeners. Podcast Science received the Golden blog award for best scientific blog in 2012.
 
-\vspace{0.5cm} 
+\vspace{0.5cm}
 \textbf{Kidi'Science}: Writer for this children science blog.\\
 
 \textbf{Public conferences}: CERN (Geneva) et Palais de la découverte (Paris)\\
 
 \vspace{-0.3cm}
-\textcolor{RoyalBlue}{\section{\large SERVICE TO THE COMMUNITY} 
+\textcolor{RoyalBlue}{\section{\large SERVICE TO THE COMMUNITY}
 \vspace{-0.35cm}\hrule}
-\vspace{0.6cm} 
+\vspace{0.6cm}
 
 \parbox{0.55\linewidth}{
 \textbf{Conference and Workshop Organizer:}
-\begin{itemize} 
+\begin{itemize}
  \item \small Organizer and SOC: \textbf{National Capital Area Disks} workshop (Baltimore, MD, Oct. 2018) - \href{https://sites.google.com/view/ncad7-at-jhu/ncad7}{\underline{\textbf{website}}}
  \item \small Organizer and SOC: \textbf{Optimal Optical Coronagraphs} workshop (Leiden, NL, Sep. 2017) - \href{https://www.lorentzcenter.nl/lc/web/2017/924/info.php3?wsid=924&venue=Snellius}{\underline{\textbf{website}}}
  \item \small SOC: \textbf{High Contrast Imaging from Space} (Baltimore, MD, Nov. 2016) - \href{http://www.cvent.com/events/high-contrast-imaging-in-space-workshop/event-summary-eb3bb6bd54a342c5a15678daa49be683.aspx}{\underline{\textbf{website}}}
@@ -198,23 +206,23 @@ Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/article
 \end{itemize}}
 \hspace{0.2cm}
 \parbox{0.43\linewidth}{
-\vspace{-0.8cm} 
-\begin{mybox}  
+\vspace{-0.8cm}
+\begin{mybox}
     \includegraphics[width=1.\textwidth]{figures_CV/ooc_poster2_sm.jpg}
  \end{mybox}
 }
 
- 
+
 
 \begin{itemize}
-    \item \small NASA Exoplanet Exploration Program Analysis Group (ExoPAG) member of the \textbf{Study Analysis Groups (SAGs) \#19} (Theory and Rigorous Contrast Metrics) since 2016 (see Jensen-Clem et al. 2018). 
+    \item \small NASA Exoplanet Exploration Program Analysis Group (ExoPAG) member of the \textbf{Study Analysis Groups (SAGs) \#19} (Theory and Rigorous Contrast Metrics) since 2016 (see Jensen-Clem et al. 2018).
     \item \small Organization of the \textbf{``Exoplanet Star and Planet Formation" (ESPF) seminar} at STScI each week (2016-2018) - \href{https://sites.google.com/site/starandplanetformationseries/}{\underline{\textbf{website}}}
-    \item \small Development of the \textbf{Paris THD optical testbed website} in August 2014. 
+    \item \small Development of the \textbf{Paris THD optical testbed website} in August 2014.
     \item \small \textbf{Referee} for publications in the \textit{AJ}, \textit{A}\&\textit{A}, \textit{MNRAS}, \textit{PASP} and \textit{JATIS}.
 \end{itemize}
 
-%\vspace{-1.cm} 
-%\textcolor{RoyalBlue}{\section{\large MAIN OBSERVATION CAMPAIGNS} 
+%\vspace{-1.cm}
+%\textcolor{RoyalBlue}{\section{\large MAIN OBSERVATION CAMPAIGNS}
 %\vspace{-0.35cm}\hrule}
 %\vspace{0.22cm}
 %
@@ -229,7 +237,7 @@ Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/article
 %\begin{itemize} \itemsep -1pt % reduce space between items
 %	    \item \small December 2015, 1 week -- Remote observing and data reduction
 %		\item \small March 2016, 1 week --  Remote observing and data reduction
-% 	\item \small October 2016, 1 week --  On-site observing and data reduction\\		
+% 	\item \small October 2016, 1 week --  On-site observing and data reduction\\
 %Since the end of 2016, all south Gemini observations are carried out remotely.
 % 	\item \small December 2016, 4 nights --  Assistance and data reduction
 % 	\item \small December 2017, 3 nights --  Assistance and data reduction
@@ -239,29 +247,29 @@ Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/article
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Demandes de temps
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-%\vspace{-0.8cm} 
-%\textcolor{RoyalBlue}{\section{\large OBSERVATION PROPOSALS} 
+
+%\vspace{-0.8cm}
+%\textcolor{RoyalBlue}{\section{\large OBSERVATION PROPOSALS}
 %\vspace{-0.35cm}\hrule}
-%\vspace{0.4cm} 
+%\vspace{0.4cm}
 %
 %\textbf{GEMINI/GPI}\\
-%\vspace{-0.4cm} 
+%\vspace{-0.4cm}
 %\begin{itemize} \itemsep -3pt % reduce space between items
 %    \item \small GS-2015B-LP-6 ``Characterizing Dusty Debris in Exoplanetary Systems'' (PI: Christine Chen)\\
 %\end{itemize}
 %
-%\vspace{-0.4cm} 
+%\vspace{-0.4cm}
 %\textbf{VLT/SPHERE}
-%\vspace{-0.2cm} 
+%\vspace{-0.2cm}
 %\begin{itemize} \itemsep -3pt % reduce space between items
 %    \item \small P 098.C-0686 ``Resolving multiple belts and sub-structures in inner regions of highly inclined debris disk" (PI: Anthony Boccaletti)
 %    \item \small P 096.C-0640 ``Exploring the inner cavities of two very inclined debris disks'' (PI: Anthony Boccaletti)
 %    \item \small P 095.C-0381 ``Investigating the inner part of a transitional disk"'' (PI: Anthony Boccaletti)
 %\end{itemize}
 %
-%\textbf{JWST / MIRI, NIRCam, NIRSPEC \& NIRISS} 
-%\vspace{-0.2cm} 
+%\textbf{JWST / MIRI, NIRCam, NIRSPEC \& NIRISS}
+%\vspace{-0.2cm}
 %\begin{itemize} \itemsep -3pt % reduce space between items
 %    \item \small Programme Early realease Science (ERS) ``High Contrast Imaging of Exoplanets and Exoplanetary Systems with JWST" (PI : Sasha Hinkley)
 %\end{itemize}
@@ -272,35 +280,35 @@ Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/article
 
 \newpage
 \vspace{-0.5cm}
-\textcolor{RoyalBlue}{\section{\large TEACHING \& MENTORING} 
+\textcolor{RoyalBlue}{\section{\large TEACHING \& MENTORING}
 \vspace{-0.35cm}\hrule}
-\vspace{0.4cm} 
+\vspace{0.4cm}
 
 \textbf{PhD supervising:}\\
 \begin{itemize}
     \item \small  \textbf{Lucie Leboulleux}, in co-direction between STScI \& ONERA, France (Leboulleux, N'Diaye, Mazoyer  et al. 2017 SPIE ; Leboulleux et al. 2018 ;  Leboulleux et al. 2018 SPIE).
     \item \textbf{Kevin Fogarty}, PhD at JHU and 1 year postdoc at STScI (Fogarty, Pueyo, Mazoyer et al, 2018 AJ ; Fogarty, Mazoyer et al, 2018 SPIE ; Fogarty, Pueyo, Mazoyer et al, 2017 SPIE). Now Caltech Prize Postdoctoral Fellowship in Experimental Physics or Astrophysics.
     % \item \textbf{Sylvain Egron}, in co-direction between STScI \& ONERA, France (Egron et al. 2017 SPIE)\\
-\end{itemize} 
+\end{itemize}
 
 \textbf{Teaching assistant:}\\
 \vspace{-0.2cm}
 
 \textbf{Universit\'e Paris Diderot -- Paris 7} \hspace{1.85cm} {\small Electronics} \hfill \textbf{2013 - 2014}\\
-\textbf{Universit\'e Paris Descartes -- Paris 5} \hspace{1.5cm} {\small Fluid dynamics} \hfill \textbf{2011 - 2012}\\	
+\textbf{Universit\'e Paris Descartes -- Paris 5} \hspace{1.5cm} {\small Fluid dynamics} \hfill \textbf{2011 - 2012}\\
 
 \textbf{La Main à la Pâte:} \hfill \textbf{2007 - 2008}
 \begin{itemize}
     \item {\small I taught science during 8 months (30h/week) in primary schools in underprivileged neighborhoods (Perpignan, France). \href{https://www.fondation-lamap.org/en/international}{\textbf{La Main à la pâte}} was  founded by Nobel Prize winner G. Charpak, astronomer P. Léna and physicist Y. Quéré, of the French Academy of Sciences, to improve the quality of science and technology teaching in primary and middle school.}
-\end{itemize} 
+\end{itemize}
 
 
 
 
-%\vspace{-0.5cm} 
-%\textcolor{RoyalBlue}{\section{\large  SPORT} 
+%\vspace{-0.5cm}
+%\textcolor{RoyalBlue}{\section{\large  SPORT}
 %\vspace{-0.35cm}\hrule}
-%\vspace{0.4cm} 
+%\vspace{0.4cm}
 %\textbf{Fencing} (15 years of practice) \& \textbf{Running} (trails, half-marathons, marathon)\\
 
 \newpage
@@ -314,7 +322,7 @@ Cover of \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/article
 \setcounter{section}{0}
 \end{center}
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\section{\large REFEREED PUBLICATIONS  IN FIRST AUTHOR} 
+\textcolor{RoyalBlue}{\section{\large REFEREED PUBLICATIONS  IN FIRST AUTHOR}
 \vspace{-0.35cm}\hrule}
 \vspace{0.6cm}
 
@@ -337,16 +345,18 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2013A\%
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\section{\large OTHER REFEREED PUBLICATIONS} 
+\textcolor{RoyalBlue}{\section{\large OTHER REFEREED PUBLICATIONS}
 \vspace{-0.35cm}\hrule}
 \vspace{0.3cm}
 
 \begin{etaremune}
-\item Stark, C. C., Belikov, R., Bolcar, M. R., Cady, E., Crill, B. P., Ertel, S., Groff, T., Hildebrandt, S., Krist, J., Lisman, P. D., \textbf{Mazoyer, J.} et al. 
+\item Ren, B.; Choquet, É.; Perrin, M. D.; Duchêne, G. et al., "An Exo-Kuiper Belt and An Extended Halo around HD 191089 in Scattered Light"
+accepted in The Astrophysical Journal (\textbf{2019}).\\
+Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019arXiv190800006R/abstract }}}
+\item Stark, C. C., Belikov, R., Bolcar, M. R., Cady, E., Crill, B. P., Ertel, S., Groff, T., Hildebrandt, S., Krist, J., Lisman, P. D., \textbf{Mazoyer, J.} et al.
 "ExoEarth yield landscape for future direct imaging space telescopes"
 Journal of Astronomical Telescopes, Instruments, and Systems, Volume 5, id. 024009 (\textbf{2019}).\\
 Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019JATIS...5b4009S/abstract}}}
-
 \item Engler, N., Boccaletti, A., Schmid, H.M., Milli, J., Augereau, J.-C., \textbf{Mazoyer, J.}, Maire, A.-L., et al., "Investigating the presence of two belts in the HD 15115 system"
 Astronomy and Astrophysics 622, A192, 22 pages (\textbf{2019}).\\
 Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019A\%26A...622A.192E/abstract}}}
@@ -376,7 +386,7 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2011AcS
 
 
 \vspace{-1cm}
-\textcolor{RoyalBlue}{\section{\large CONFERENCE PROCEEDINGS IN FIRST AUTHOR} 
+\textcolor{RoyalBlue}{\section{\large CONFERENCE PROCEEDINGS IN FIRST AUTHOR}
 \vspace{-0.35cm}\hrule}
 \vspace{0.5cm}
 
@@ -403,40 +413,49 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2012SPI
 \end{etaremune}
 
 
+% \vspace{-1cm}
+% \textcolor{RoyalBlue}{\section{\large OTHER CONFERENCE PROCEEDINGS}
+% \vspace{-0.35cm}\hrule}
+% \vspace{0.5cm}
+
+% \begin{etaremune}
+% \item Fogarty, K., \textbf{Mazoyer, J.}, Laurent, K. S., et al.., “Optimal deformable mirror and pupil apodization combinations for apodized pupil Lyot coronagraphs with obstructed pupils,” SPIE Proceedings 106981J, 19 pages (\textbf{2018}).
+% \item Ruane, G., Riggs, A., \textbf{Mazoyer, J.}, et al., “Review of high-contrast imaging systems for current and future ground- and space-based telescopes I: coronagraph design methods and optical performance metrics,” SPIE Proceedings 106982S, 20 pages (\textbf{2018}).
+% \item Jovanovic, N., Absil, O., Baudoz, P., et al., “Review of high-contrast imaging systems for current and future ground-based and space-based telescopes: Part II. Common path wavefront sensing/control and coherent differential imaging,” SPIE Proceedings 107031U, 19 pages (\textbf{2018}).
+% \item Laurent, K. S., Fogarty, K., Zimmerman, N. T., et al., “Apodized pupil Lyot coronagraphs designs for future segmented space telescopes,” SPIE Proceedings 106982W, 18 pages (\textbf{2018}).
+% \item Leboulleux, L., Pueyo, L., Sauvage, “Sensitivity analysis for high-contrast imaging with segmented space telescopes,” SPIE Proceedings 106986H, 16 pages (\textbf{2018}).
+% \item N’Diaye, M., Fogarty, K., Soummer, et al., “Apodized Pupil Lyot coronagraphs with arbitrary aperture telescopes: novel designs using hybrid focal plane masks,” SPIE Proceedings 106986A, 11 pages (\textbf{2018}).
+% \item Snik, F., Absil, O., Baudoz, P., et al., “Review of high-contrast imaging systems for current and future ground-based and space-based telescopes III: technology opportunities and pathways,” SPIE Proceedings 107062L, 16 pages (\textbf{2018}).
+% \item Soummer, R., Brady, G. R., Brooks, K., et al., “High-contrast imager for complex aperture telescopes (HiCAT): 5. first results with segmented-aperture coronagraph and wavefront control,” SPIE Proceedings 106981O, 16 pages (\textbf{2018}).
+% \item Pueyo, L., Zimmerman, N., Bolcar, et al., “The LUVOIR architecture ‘A’ coronagraph instrument,” SPIE Proceedings 103980F, 20 pages (\textbf{2017}).
+% \item Fogarty, K., Pueyo, L., \textbf{Mazoyer, J.} and N’Diaye, M., “Polynomial apodized vortex coronagraphs for obscured telescope pupils,” SPIE Proceedings 104000T, International Society for Optics and Photonics, 17 pages (\textbf{2017}).
+% \item Egron, S., Soummer, R., Lajoie, C.-P., et al., “James Webb Space Telescope optical simulation testbed IV: linear control alignment of the primary segmented mirror,” SPIE Proceedings 1039811, 9 pages (\textbf{2017}).
+% \item Leboulleux, L., N’Diaye, M., \textbf{Mazoyer, J.}, et al. “Comparison of wavefront control algorithms and first results on the high-contrast imager for complex aperture telescopes (hicat) testbed,” SPIE Proceedings 105622Z, ICSO (\textbf{2017}).
+% \item Leboulleux, L., N’Diaye, M., Riggs, A. J. E., et al., “High-contrast imager for Complex Aperture Telescopes (HiCAT). 4. Status and wavefront control development,” SPIE Proceedings 99043C, 13 pages (\textbf{2016}).
+% \item N’Diaye, M., \textbf{Mazoyer, J.}, Choquet, É., et al., “High-contrast imager for complex aperture telescopes (HiCAT): 3. first lab results with wavefront control,” SPIE Proceedings 96050I, 12 pages (\textbf{2015}).
+% \item Galicher, R., Baudoz, P., Delorme, J. R. et al., “High contrast imaging on the THD bench: progress and upgrades,” SPIE Proceedings 91435A, 11 pages (\textbf{2014}).
+% \item Delorme, J. R., Galicher, R., Baudoz, et al., “High-contrast imaging in wide spectral band with a self-coherent camera and achromatic coronagraphs,” SPIE Proceedings  91515Q, 12 pages (\textbf{2014}).
+% \item Galicher, R., \textbf{Mazoyer, J.}, Baudoz, P. and Rousset, G., “High-contrast imaging with a self-coherent camera,” SPIE Proceedings 88640M, 11 pages (\textbf{2013}).
+% \item Galicher, R., Delorme, J. R., Baudoz, P. and \textbf{Mazoyer, J.}, “Focal Plane Wavefront Sensing with a self-coherent camera,” AO4ELT3 Proceedings 123, 7 pages (\textbf{2013}).
+% \item Baudoz, P., \textbf{Mazoyer, J.} and Galicher, R., “Laboratory tests of planet signal extraction in high contrast images,” AO4ELT3 Proceedings 109, 8 pages (\textbf{2013}).
+% \item Mas, M., Baudoz, P., \textbf{Mazoyer, J.}, et al., “Experimental results on wavefront correction using the self-coherent camera,” SPIE Proceedings 844689, 12 pages (\textbf{2012}).
+% \item Baudoz, P., \textbf{Mazoyer, J.}, Mas, M., et al., “Dark hole and planet detection: laboratory results using the self-coherent camera,” SPIE Proceedings 84468C, 11 pages (\textbf{2012}).
+% \item Gasnault, O., \textbf{Mazoyer, J.}, Cousin, A., et al., “Deciphering Sample and Atmospheric Oxygen Contents with ChemCam on Mar.,” 43rd LPSC, 2888, 2 pages (\textbf{2012}).
+% \end{etaremune}
+
 \vspace{-1cm}
-\textcolor{RoyalBlue}{\section{\large OTHER CONFERENCE PROCEEDINGS} 
+\textcolor{RoyalBlue}{\section{\large ASTRO2020 DECADAL SURVEY APC WHITE PAPER}
 \vspace{-0.35cm}\hrule}
 \vspace{0.5cm}
-
-\begin{etaremune} 
-\item Fogarty, K., \textbf{Mazoyer, J.}, Laurent, K. S., et al.., “Optimal deformable mirror and pupil apodization combinations for apodized pupil Lyot coronagraphs with obstructed pupils,” SPIE Proceedings 106981J, 19 pages (\textbf{2018}).
-\item Ruane, G., Riggs, A., \textbf{Mazoyer, J.}, et al., “Review of high-contrast imaging systems for current and future ground- and space-based telescopes I: coronagraph design methods and optical performance metrics,” SPIE Proceedings 106982S, 20 pages (\textbf{2018}).
-\item Jovanovic, N., Absil, O., Baudoz, P., et al., “Review of high-contrast imaging systems for current and future ground-based and space-based telescopes: Part II. Common path wavefront sensing/control and coherent differential imaging,” SPIE Proceedings 107031U, 19 pages (\textbf{2018}).
-\item Laurent, K. S., Fogarty, K., Zimmerman, N. T., et al., “Apodized pupil Lyot coronagraphs designs for future segmented space telescopes,” SPIE Proceedings 106982W, 18 pages (\textbf{2018}).
-\item Leboulleux, L., Pueyo, L., Sauvage, “Sensitivity analysis for high-contrast imaging with segmented space telescopes,” SPIE Proceedings 106986H, 16 pages (\textbf{2018}).
-\item N’Diaye, M., Fogarty, K., Soummer, et al., “Apodized Pupil Lyot coronagraphs with arbitrary aperture telescopes: novel designs using hybrid focal plane masks,” SPIE Proceedings 106986A, 11 pages (\textbf{2018}).
-\item Snik, F., Absil, O., Baudoz, P., et al., “Review of high-contrast imaging systems for current and future ground-based and space-based telescopes III: technology opportunities and pathways,” SPIE Proceedings 107062L, 16 pages (\textbf{2018}).
-\item Soummer, R., Brady, G. R., Brooks, K., et al., “High-contrast imager for complex aperture telescopes (HiCAT): 5. first results with segmented-aperture coronagraph and wavefront control,” SPIE Proceedings 106981O, 16 pages (\textbf{2018}).
-\item Pueyo, L., Zimmerman, N., Bolcar, et al., “The LUVOIR architecture ‘A’ coronagraph instrument,” SPIE Proceedings 103980F, 20 pages (\textbf{2017}).
-\item Fogarty, K., Pueyo, L., \textbf{Mazoyer, J.} and N’Diaye, M., “Polynomial apodized vortex coronagraphs for obscured telescope pupils,” SPIE Proceedings 104000T, International Society for Optics and Photonics, 17 pages (\textbf{2017}).
-\item Egron, S., Soummer, R., Lajoie, C.-P., et al., “James Webb Space Telescope optical simulation testbed IV: linear control alignment of the primary segmented mirror,” SPIE Proceedings 1039811, 9 pages (\textbf{2017}).
-\item Leboulleux, L., N’Diaye, M., \textbf{Mazoyer, J.}, et al. “Comparison of wavefront control algorithms and first results on the high-contrast imager for complex aperture telescopes (hicat) testbed,” SPIE Proceedings 105622Z, ICSO (\textbf{2017}).
-\item Leboulleux, L., N’Diaye, M., Riggs, A. J. E., et al., “High-contrast imager for Complex Aperture Telescopes (HiCAT). 4. Status and wavefront control development,” SPIE Proceedings 99043C, 13 pages (\textbf{2016}).
-\item N’Diaye, M., \textbf{Mazoyer, J.}, Choquet, É., et al., “High-contrast imager for complex aperture telescopes (HiCAT): 3. first lab results with wavefront control,” SPIE Proceedings 96050I, 12 pages (\textbf{2015}).
-\item Galicher, R., Baudoz, P., Delorme, J. R. et al., “High contrast imaging on the THD bench: progress and upgrades,” SPIE Proceedings 91435A, 11 pages (\textbf{2014}).
-\item Delorme, J. R., Galicher, R., Baudoz, et al., “High-contrast imaging in wide spectral band with a self-coherent camera and achromatic coronagraphs,” SPIE Proceedings  91515Q, 12 pages (\textbf{2014}).
-\item Galicher, R., \textbf{Mazoyer, J.}, Baudoz, P. and Rousset, G., “High-contrast imaging with a self-coherent camera,” SPIE Proceedings 88640M, 11 pages (\textbf{2013}).
-\item Galicher, R., Delorme, J. R., Baudoz, P. and \textbf{Mazoyer, J.}, “Focal Plane Wavefront Sensing with a self-coherent camera,” AO4ELT3 Proceedings 123, 7 pages (\textbf{2013}).
-\item Baudoz, P., \textbf{Mazoyer, J.} and Galicher, R., “Laboratory tests of planet signal extraction in high contrast images,” AO4ELT3 Proceedings 109, 8 pages (\textbf{2013}).
-\item Mas, M., Baudoz, P., \textbf{Mazoyer, J.}, et al., “Experimental results on wavefront correction using the self-coherent camera,” SPIE Proceedings 844689, 12 pages (\textbf{2012}).
-\item Baudoz, P., \textbf{Mazoyer, J.}, Mas, M., et al., “Dark hole and planet detection: laboratory results using the self-coherent camera,” SPIE Proceedings 84468C, 11 pages (\textbf{2012}).
-\item Gasnault, O., \textbf{Mazoyer, J.}, Cousin, A., et al., “Deciphering Sample and Atmospheric Oxygen Contents with ChemCam on Mar.,” 43rd LPSC, 2888, 2 pages (\textbf{2012}).
-\end{etaremune}
+\begin{itemize}
+\item \textbf{Mazoyer, J.} et al., “High-Contrast Testbeds for Future Space-Based Direct Imaging Exoplanet Missions” (\textbf{2019}).\\
+Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019arXiv190709508M/abstract}}}
+\end{itemize}
 
 \newpage
 \textcolor{White}{.}
 \vspace{-1.8cm}
-\textcolor{RoyalBlue}{\section{\large PHD THESIS -- Universit\'e Paris Diderot} 
+\textcolor{RoyalBlue}{\section{\large PHD THESIS -- Universit\'e Paris Diderot}
 \vspace{-0.35cm}\hrule}
 \vspace{0.5cm}
 
@@ -454,11 +473,11 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014PhD
 %\textcolor{White}{.}
 %\vspace{-1.2cm}
 \vspace{-0.9cm}
-\textcolor{RoyalBlue}{\section{\large PRESENTATIONS} 
+\textcolor{RoyalBlue}{\section{\large PRESENTATIONS}
 \vspace{-0.35cm}\hrule}
 \vspace{0.45cm}
 
-\textcolor{RoyalBlue}{\subsection{INVITED PRESENTATIONS}} 
+\textcolor{RoyalBlue}{\subsection{INVITED PRESENTATIONS}}
 \begin{etaremune}
 \item ``Wavefront control and sensing for the direct imaging of exoplanets", JPL seminar, Pasadena, FR \textbf{Dec. 2018}
 
@@ -476,7 +495,7 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014PhD
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\subsection{WORKSHOPS AND CONFERENCES}} 
+\textcolor{RoyalBlue}{\subsection{WORKSHOPS AND CONFERENCES}}
 
 \begin{etaremune}
 \item ``The surprising scattering phase function of the HR 4796 debris disk", AAS conference, Seattle, WA, US \textbf{Jan. 2019}
@@ -515,7 +534,7 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014PhD
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\subsection{SEMINARS}} 
+\textcolor{RoyalBlue}{\subsection{SEMINARS}}
 
 \begin{etaremune}
 \item ``High-contrast imaging of exoplanets with future large ground- and space-based telescopes : current limitations and perspectives", IPAC, Caltech, Pasadena, CA \textbf{Apr. 2019}
@@ -551,19 +570,19 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014PhD
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\subsection{PUBLIC PRESENTATIONS}} 
+\textcolor{RoyalBlue}{\subsection{PUBLIC PRESENTATIONS}}
 
 \begin{enumerate}\itemsep 3pt
-\item[$\bullet$]  ``Imagerie directe d’exoplanètes avec les futurs grands télescopes au sol et spatiaux : limitations actuelles et perspectives". French class to Caltech students \textbf{Apr. 2019}. 
+\item[$\bullet$]  ``Imagerie directe d’exoplanètes avec les futurs grands télescopes au sol et spatiaux : limitations actuelles et perspectives". French class to Caltech students \textbf{Apr. 2019}.
 
-\item[$\bullet$]  ``Extremely Large Telescopes : des cathédrales pour l’astronomie". CERN, Suisse \textbf{Aug. 2014}. 
+\item[$\bullet$]  ``Extremely Large Telescopes : des cathédrales pour l’astronomie". CERN, Suisse \textbf{Aug. 2014}.
 
-\item[$\bullet$] ``Des œufs dans l'espace". Palais de la découverte, Paris, France \textbf{May 2016}. 
+\item[$\bullet$] ``Des œufs dans l'espace". Palais de la découverte, Paris, France \textbf{May 2016}.
 
-\item[$\bullet$] ``Excréments dans l'espace". Palais de la découverte, Paris, France \textbf{May 2017}. 
+\item[$\bullet$] ``Excréments dans l'espace". Palais de la découverte, Paris, France \textbf{May 2017}.
 
 
 \end{enumerate}
-	
+
 
 \end{document}
