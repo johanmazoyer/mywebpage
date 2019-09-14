@@ -1,0 +1,6 @@
+Options -Indexes
+Options -Multiviews
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.johanmazoyer.com [NC]
+RewriteRule ^(.*) https://johanmazoyer.com/$1 [L,R=301,QSA]
