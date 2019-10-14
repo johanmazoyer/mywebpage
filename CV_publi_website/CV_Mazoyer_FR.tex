@@ -1,10 +1,7 @@
 % LaTeX file for resume
-\documentclass[11pt,a4paper, french]{article}
+\documentclass[11pt, a4paper, french]{article}
 \usepackage[francais]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
 
 
 \usepackage[usenames, dvipsnames]{xcolor}
@@ -17,8 +14,6 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 
 \usepackage{etaremune}
 
-\definecolor{gris}{rgb}{0.45,0.45,0.45}
-\definecolor{blanc}{rgb}{1,1,1}
 
 \usepackage[colorlinks = true,urlcolor = BrickRed]{hyperref}
 
@@ -32,20 +27,12 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 \usepackage{fancyhdr}  % use this package to get a 2 line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
 
-\setlength{\headsep}{0pt}  % space between header and text
-% \setlength{\footskip}{2pt}
 \pagestyle{fancy}     % set pagestyle for document
-
-\rhead{\textcolor{gris}{ \thepage/9}}
-\chead{\textcolor{gris}{}} % put text in header (right side)
+\usepackage{lastpage}
+\rhead{\textcolor{gray}{ \thepage/\pageref*{LastPage}}}
 \cfoot{}
 \lfoot{\textcolor{Gray}{CV mis à jour en \monthyeardate\today}}
-
-% \lfoot{\textcolor{Gray}{CV mis à jour en \monthyeardate\today}}
 \rfoot{\href{http://johanmazoyer.com}{johanmazoyer.com}}
-
-
-\setlength{\parindent}{0pt}
 
 \setlength{\headwidth}{17.2cm} % taille de l'entete
 \usepackage[total={17.2cm,25.cm}, left=1.9cm, top=2.5cm]{geometry}
@@ -204,26 +191,26 @@ Observation et Charactérisation de Systèmes Extrasolaires, Disques de Débris\
 \vspace{-0.2cm}\hrule}
 \vspace{0.4cm}
 
-\textbf{Carl Sagan Fellowship} (\href{http://www.stsci.edu/stsci-research/fellowships/nasa-hubble-fellowship-program}{NASA Hubble Fellowship Program}) -- 3 ans \hfill   2018\\
+\textbf{Carl Sagan Fellowship} (\href{http://www.stsci.edu/stsci-research/fellowships/nasa-hubble-fellowship-program}{NASA Hubble Fellowship Program}) -- 3 ans \hfill   { \bf 2018}\\
 
 \vspace{-0.15cm}
-Couverture du journal \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/articles/aa/abs/2014/04/contents/contents.html}{Volume 564}) \hfill  2014\\
+Couverture du journal \textbf{Astronomy \& Astrophysics} (\href{https://www.aanda.org/articles/aa/abs/2014/04/contents/contents.html}{Volume 564}) \hfill  { \bf 2014}\\
 
 \vspace{-0.15cm}
-\textbf{Meilleure présentation}, conférence des chercheurs du CNES (JC2) \hfill   2013\\
+\textbf{Meilleure présentation}, conférence des chercheurs du CNES (JC2) \hfill   { \bf 2013}\\
 
 \vspace{-0.15cm}
-\textbf{Bourse doctorale} du CNES -- 3 ans \hfill   2011\\
+\textbf{Bourse doctorale} du CNES -- 3 ans \hfill   { \bf 2011}\\
 
 \vspace{-0.15cm}
-\textbf{Bourse d'étude} de l'Ecole polytechnique -- 4 ans \hfill   2007\\
+\textbf{Bourse d'étude} de l'Ecole polytechnique -- 4 ans \hfill   { \bf 2007}\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% SECTION VULGARISATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \newpage
-% \textcolor{blanc}{.}
+% \textcolor{white}{.}
 \vspace{-0.3cm}
 \textcolor{RoyalBlue}{\section{\large DIFFUSION DES SCIENCES}
 \vspace{-0.2cm}\hrule}
@@ -315,7 +302,7 @@ relatifs à la physique et à l'astrophysique.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \newpage
-% \textcolor{blanc}{.}
+% \textcolor{white}{.}
 % \vspace{-0.8cm}
 % \textcolor{RoyalBlue}{\section{\large DEMANDES DE TEMPS D'OBSERVATION ACCEPTÉES}
 % \vspace{-0.3cm}\hrule}
@@ -352,7 +339,7 @@ relatifs à la physique et à l'astrophysique.
 \textcolor{RoyalBlue}{\section{\large PRISES DE RESPONSABILITÉS POUR LA COMMUNAUTÉ}
 \vspace{-0.2cm}\hrule}
 \vspace{0.4cm}
-% \lhead{\textcolor{gris}{J. MAZOYER}}
+% \lhead{\textcolor{gray}{J. MAZOYER}}
 
 \textbf{Organisation de conférences et ateliers}\\
 \vspace{-0.1cm}
@@ -444,171 +431,220 @@ relatifs à la physique et à l'astrophysique.
 \vspace{-1.5cm}
 \begin{center}
 \begin{LARGE}
-\textbf{Liste des publications et communications}\\
+\textbf{Liste des publications}\\
 \end{LARGE}
 \end{center}
+\setcounter{section}{0}
 
-\vspace{-0.7cm}
-\textcolor{RoyalBlue}{\section{\large PUBLICATIONS EN PREMIER AUTEUR}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
+\vspace{-0.8cm}
+\textcolor{RoyalBlue}{\section{ARTICLES MAJEURS}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+\begin{etaremune}\itemsep 0pt
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; N'Diaye, M. et al. ({\bf2018}), {\it Active Correction of Aperture Discontinuities-Optimized Stroke Minimization. II. Optimization for Future Missions}, The Astronomical Journal, 155, 8, \href{https://ui.adsabs.harvard.edu/abs/2018AJ....155....8M/abstract}{ADS Link}, 7 citations
 
-\begin{etaremune}
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; N'Diaye, M. et al. ({\bf2018}), {\it Active Correction of Aperture Discontinuities-Optimized Stroke Minimization. I. A New Adaptive Interaction Matrix Algorithm}, The Astronomical Journal, 155, 7, \href{https://ui.adsabs.harvard.edu/abs/2018AJ....155....7M/abstract}{ADS Link}, 6 citations
 
-\item \textbf{Mazoyer, J.}, Pueyo, L., N’Diaye, M., Fogarty, K., Zimmerman, N., Soummer, R., Shaklan, S. and Norman, C., “\textit{Active Correction of Aperture Discontinuities-Optimized Stroke Minimization. II. Optimization for Future Missions},” The Astronomical Journal 155, 8, 19 pages (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018AJ....155....8M}}}
-\item \textbf{Mazoyer, J.}, Pueyo, L., N’Diaye, M., Fogarty, K., Zimmerman, N., Leboulleux, L., St. Laurent, K. E., Soummer, R., Shaklan, S. and Norman, C., “\textit{Active Correction of Aperture Discontinuities-Optimized Stroke Minimization. I. A New Adaptive Interaction Matrix Algorithm},” The Astronomical Journal 155, 7, 13 pages (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018AJ....155....7M}}}
-\item \textbf{Mazoyer, J.}, Boccaletti, A., Choquet, É., Perrin, M. D., Pueyo, L., Augereau, J.-C., Lagrange, A.-M., Debes, J. and Wolff, S. G., “\textit{A Symmetric Inner Cavity in the HD 141569A Circumstellar Disk},” The Astrophysical Journal 818(2), 150, 8 pages (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016ApJ...818..150M}}}
-\item \textbf{Mazoyer, J.}, Pueyo, L., Norman, C., N’Diaye, M., van der Marel, R. P. and Soummer, R., “\textit{Active compensation of aperture discontinuities for WFIRST-AFTA: analytical and numerical comparison of propagation methods and preliminary results with a WFIRST-AFTA-like pupil},” Journal of Astronomical Telescopes, Instruments, and Systems 2, 011008, 8 pp (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016JATIS...2a1008M}}}
-\item \textbf{Mazoyer, J.}, Boccaletti, A., Augereau, J.-C., Lagrange, A.-M., Galicher, R. and Baudoz, P., “\textit{Is the HD 15115 inner disk really asymmetrical?},” Astronomy and Astrophysics 569, A29, 9 pages (\textbf{2014}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014A\%26A...569A..29M}}}
-\item \textbf{Mazoyer, J.}, Baudoz, P., Galicher, R. and Rousset, G., “\textit{High-contrast imaging in polychromatic light with the self-coherent camera},” Astronomy and Astrophysics 564, L1, 4 pages (\textbf{2014}).\\
-\textcolor{RoyalBlue}{\textbf{Publié en couverture du numéro d'Astronomy \& Astrophysics d'Avril 2014}}\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014A\%26A...564L...1M}}}
-\item \textbf{Mazoyer, J.}, Baudoz, P., Galicher, R., Mas, M. and Rousset, G., “\textit{Estimation and correction of wavefront aberrations using the self-coherent camera: laboratory results},” Astronomy and Astrophysics 557, 9, 13 pages (\textbf{2013}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2013A\%26A...557A...9M}}}
+\item Fogarty, K. ; Pueyo, L. ; {\bf Mazoyer, J.} et al. ({\bf2017}), {\it Polynomial Apodizers for Centrally Obscured Vortex Coronagraphs}, The Astronomical Journal, 154, 240, \href{https://ui.adsabs.harvard.edu/abs/2017AJ....154..240F/abstract}{ADS Link}, 6 citations
 
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; Norman, C. et al. ({\bf2016}), {\it Active compensation of aperture discontinuities for WFIRST-AFTA: analytical and numerical comparison of propagation methods and preliminary results with a WFIRST-AFTA-like pupil}, Journal of Astronomical Telescopes, Instruments, and Systems, 2, 011008, \href{https://ui.adsabs.harvard.edu/abs/2016JATIS...2a1008M/abstract}{ADS Link}, 7 citations
 
-\end{etaremune}
+\item {\bf Mazoyer, J.} ; Boccaletti, A. ; Choquet, É. et al. ({\bf2016}), {\it A Symmetric Inner Cavity in the HD 141569A Circumstellar Disk}, The Astrophysical Journal, 818, 150, \href{https://ui.adsabs.harvard.edu/abs/2016ApJ...818..150M/abstract}{ADS Link}, 9 citations
 
-\vspace{-0.45cm}
-\textcolor{RoyalBlue}{\section{\large AUTRES PUBLICATIONS}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
+\item {\bf Mazoyer, J.} ; Boccaletti, A. ; Augereau, J. -C. et al. ({\bf2014}), {\it Is the HD 15115 inner disk really asymmetrical?}, Astronomy and Astrophysics, 569, A29, \href{https://ui.adsabs.harvard.edu/abs/2014A&A...569A..29M/abstract}{ADS Link}, 28 citations
 
-\begin{etaremune}
-\item Bhowmik, T., Boccaletti, A., Thébault, P., Kral, Q., \textbf{Mazoyer, J.} et al.,
-"Spatially resolved spectroscopy of the debris disk HD 32297: Further evidence of small dust grains"
-accepted in Astronomy and Astrophysics (\textbf{2019}).\\
-Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019arXiv190808511B/abstract}}}
-\item Ren, B.; Choquet, É.; Perrin, M. D.; Duchêne, G. et al., "An Exo-Kuiper Belt and An Extended Halo around HD 191089 in Scattered Light"
-The Astrophysical Journal 882, 64, 24 pp pages(\textbf{2019}).\\
-Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019arXiv190800006R/abstract}}}
-\item Stark, C. C., Belikov, R., Bolcar, M. R., Cady, E., Crill, B. P., Ertel, S., Groff, T., Hildebrandt, S., Krist, J., Lisman, P. D., \textbf{Mazoyer, J.} et al.
-"ExoEarth yield landscape for future direct imaging space telescopes"
-Journal of Astronomical Telescopes, Instruments, and Systems, Volume 5, id. 024009 (\textbf{2019}).\\
-Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019JATIS...5b4009S/abstract}}}
-\item Engler, N., Boccaletti, A., Schmid, H.M., Milli, J., Augereau, J.-C., \textbf{Mazoyer, J.}, Maire, A.-L., et al., "Investigating the presence of two belts in the HD 15115 system"
-Astronomy and Astrophysics 622, A192, 22 pages (\textbf{2019}).\\
-Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019A\%26A...622A.192E/abstract}}}
-\item Leboulleux, L., Sauvage, J.-F., Pueyo, L.,  Fusco, T., Soummer, R., \textbf{Mazoyer, J.}, et al. , “Pair-based Analytical model for Segmented Telescopes Imaging from Space (PASTIS) for sensitivity analysis,” Journal of Astronomical Telescopes, Instruments, and Systems, 4(3), 035002, 14 pages  (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018JATIS...4c5002L}}}
-\item Esposito et al. “Direct Imaging of the HD 35841 Debris Disk: A Polarized Dust Ring from Gemini Planet Imager and an Outer Halo from HST/STIS,” The Astronomical Journal, 156, 2, 16 pages (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018AJ....156...47E}}}
-\item Poteet, C. A., Chen, C. H., Hines, D. C., Perrin, M. D., Debes, J. H., Pueyo, L., Schneider, G., \textbf{Mazoyer, J.}, and Kolokolova, L. “Space-Based Coronagraphic Imaging Polarimetry of the TW Hydrae Disk: Shedding New Light on Self-Shadowing Effects,” The Astronomical Journal 860, 115, 14 pages (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018ApJ...860..115P}}}
-\item Jensen-Clem, R., Mawet, D., Gomez Gonzalez, C. A., Absil, O., Belikov, R., Currie, T., Kenworthy, M. A., Marois, C., \textbf{Mazoyer, J.}, Ruane, G., Tanner, A. and Cantalloube, F., “A New Standard for Assessing the Performance of High Contrast Imaging Systems,” The Astronomical Journal 155, 19, 8 pages (\textbf{2018}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2018AJ....155...19J}}}
-\item Fogarty, K., Pueyo, L., \textbf{Mazoyer, J.} and N’Diaye, M., “Polynomial Apodizers for Centrally Obscured Vortex Coronagraphs,” The Astronomical Journal 154, 240, 18 pages (\textbf{2017}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2017AJ....154..240F}}}
-\item Perrot, C., Boccaletti, A., Pantin, E., Augereau, J.-C., Lagrange, A.-M., Galicher, R., Maire, A.-L., \textbf{Mazoyer, J.} et al., “Discovery of concentric broken rings at sub-arcsec separations in the HD 141569A gas-rich, debris disk with VLT/SPHERE,” Astronomy and Astrophysics 590, L7, 9 pages (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016A\%26A...590L...7P}}}
-\item Delorme, J. R., Galicher, R., Baudoz, P., Rousset, G., \textbf{Mazoyer, J.} and Dupuis, O., “Focal plane wavefront sensor achromatization: The multireference self-coherent camera,” Astronomy and Astrophysics 588, A136, 14 pages (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016A\%26A...588A.136D}}}
-\item Debes, J. H., Ygouf, M., Choquet, E., Hines, D. C., Perrin, M. D., Golimowski, D. A., Lajoie, C.-P., \textbf{Mazoyer, J.}, Pueyo, L., Soummer, R. and van der Marel, R., “WFIRST-AFTA coronagraphic operations: lessons learned from the HST and the JWST,” Journal of Astronomical Telescopes, Instruments, and Systems 2(1), 011010, 14 pages (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016JATIS...2a1010D}}}
-\item Choquet, É., Perrin, M. D., Chen, C. H., Soummer, R., Pueyo, L., Hagan, J. B., Gofas-Salas, E., Rajan, A., Golimowski, D. A., Hines, D. C., Schneider, G., \textbf{Mazoyer, J.}, et al., “First Images of Debris Disks around TWA 7, TWA 25, HD 35650, and HD 377,” The Astrophysical Journal Letters 817, L2, 6 pages (\textbf{2016}).\\
-    Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016ApJ...817L...2C}}}
-\item Wiens, R. C., Maurice, S., Lasue, J., Forni, O., Anderson, R. B., Clegg, S., Bender, S., Blaney, D., Barraclough, B. L., Cousin, A., Deflores, L., Delapp, D., Dyar, M. D., Fabre, C., Gasnault, O., Lanza, N., \textbf{Mazoyer, J.}, et al., “Pre-flight calibration and initial data processing for the ChemCam laser-induced breakdown spectroscopy instrument on the Mar. Science Laboratory rover,” Spectrochimica Acta Part B: Atomic Spectroscopy 82, 1–27, 27 pages (\textbf{2013}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2013AcSpe..82....1W}}}
-\item Cousin, A., Forni, O., Maurice, S., Gasnault, O., Fabre, C., Sautter, V., Wiens, R. C. and \textbf{Mazoyer, J.}, “Laser induced breakdown spectroscopy library for the Martian environment,” Spectrochimica Acta 66, 805–814, 10 pages (\textbf{2011}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2011AcSpe..66..805C}}}
-\end{etaremune}
+\item {\bf Mazoyer, J.} ({\bf2014}), {\it High-Contrast Direct Imaging Of Exoplanets And Circumstellar Disks: From The Self-Coherent Camera To Nici Data Analysis}, Ph.D. Thesis, \href{https://ui.adsabs.harvard.edu/abs/2014PhDT.......497M/abstract}{ADS Link}, 2 citations
 
-\vspace{-0.3cm}
-\textcolor{RoyalBlue}{\section{\large ``\textit{WHITE PAPERS}'' POUR LE \textit{DECADAL SURVEY} 2020}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
+\item {\bf Mazoyer, J.} ; Baudoz, P. ; Galicher, R. et al. ({\bf2014}), {\it High-contrast imaging in polychromatic light with the self-coherent camera}, Astronomy and Astrophysics, 564, L1, \href{https://ui.adsabs.harvard.edu/abs/2014A&A...564L...1M/abstract}{ADS Link}, 23 citations
 
-\begin{itemize}
-    \item[$\bullet$] \textbf{Mazoyer, J.} et al., “High-Contrast Testbeds for Future Space-Based Direct Imaging Exoplanet Missions” (\textbf{2019}).\\
-    Link: \textcolor{BrickRed}{\underline{\url{https://ui.adsabs.harvard.edu/abs/2019arXiv190709508M/abstract}}}
-\end{itemize}
-
-
-\vspace{-0.3cm}
-\textcolor{RoyalBlue}{\section{\large THESE -- Universit\'e Paris Diderot}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
-
-\begin{itemize}
-\item[$\bullet$] \textbf{Mazoyer, J.}, “Haut contraste pour l'imagerie directe d'exoplanètes et de disques: de la self-coherent camera à l'analyse de données NICI," Thesis manuscript (219 pages, French), \textbf{defended in Sep. 2014}. \\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014PhDT.......497M}}}
-\end{itemize}
-
-
-\vspace{-0.3cm}
-\textcolor{RoyalBlue}{\section{\large ACTES DE CONFÉRENCES EN PREMIER AUTEUR}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
-
-\begin{etaremune}
-
-\item \textbf{Mazoyer, J.} and Pueyo, L., “\textit{Fundamental limits to high-contrast wavefront control},” Proceedings of the SPIE 10400, 1040014, 18 pages (\textbf{2017}).\\
-Liens : \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2017SPIE10400E..14M}}}
-\item \textbf{Mazoyer, J.}, Pueyo, L., N’Diaye, M., Fogarty, K., Leboulleux, L., Egron, S. and Norman, C., “\textit{Capabilities of ACAD-OSM, an active method for the correction of aperture discontinuities},” Proceedings of the SPIE 10400, 104000G, 13 pages (\textbf{2017}).\\
-Liens : \textcolor{BrickRed}{\underline{\url{http://dx.doi.org/10.1117/12.2273070}}}
-\item \textbf{Mazoyer, J.}, Pueyo, L., N’Diaye, M., Mawet, D., Soummer, R. and Norman, C., “\textit{Correcting for the effects of pupil discontinuities with the ACAD method},” Proceedings of the SPIE 9904, 99044T, 12 pages (\textbf{2016}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2016SPIE.9904E..4TM}}}
-\item \textbf{Mazoyer, J.}, Pueyo, L., Norman, C., N’Diaye, M., Mawet, D., Soummer, R., Perrin, M., Choquet, É. and Carlotti, A., “\textit{Active correction of aperture discontinuities (ACAD) for space telescope pupils: a parametic analysis},” Proceedings of the SPIE 9605, 96050M, 13 pages (\textbf{2015}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2015SPIE.9605E..0MM}}}
-\item \textbf{Mazoyer, J.}, Galicher, R., Baudoz, P., Lanzoni, P., Zamkotsian, F. and Rousset, G., “\textit{Deformable mirror interferometric analysis for the direct imagery of exoplanets},” Proceedings of the SPIE 9148, 914846, 11 pages (\textbf{2014}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2014SPIE.9148E..46M}}}
-\item \textbf{Mazoyer, J.}, Galicher, R., Baudoz, P. and Rousset, G., “\textit{Speckle correction in polychromatic light with the self-coherent camera for the direct detection of exoplanets},” Proceedings of the SPIE 8864, 88640N, 9 pages (\textbf{2013}).\\
-\item \textbf{Mazoyer, J.}, Baudoz, P., Galicher, R. and Rousset, G., “\textit{Direct detection of exoplanets in polychromatic light with a Self-coherent camera},” Proceedings of the Third AO4ELT Conference, 97, 8 pages (\textbf{2013}).
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2013SPIE.8864E..0NM}}}
-\item \textbf{Mazoyer, J.}, Baudoz, P., Mas, M., Rousset, G. and Galicher, R., “\textit{Experimental parametric study of the self-coherent camera},” Proceedings of the SPIE 8442, 844250, 10 pages (\textbf{2012}).\\
-Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2012SPIE.8442E..50M}}}
-
+\item {\bf Mazoyer, J.} ; Baudoz, P. ; Galicher, R. et al. ({\bf2013}), {\it Estimation and correction of wavefront aberrations using the self-coherent camera: laboratory results}, Astronomy and Astrophysics, 557, A9, \href{https://ui.adsabs.harvard.edu/abs/2013A&A...557A...9M/abstract}{ADS Link}, 23 citations
 
 \end{etaremune}
 
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\section{\large AUTRES ACTES DE CONFÉRENCES}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
+\textcolor{RoyalBlue}{\section{AUTRES ARTICLES}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+\begin{etaremune}\itemsep 0pt
+\item Bhowmik, T. et al. ({\bf2019}), {\it Spatially resolved spectroscopy of the debris disk HD 32297. Further evidence of small dust grains}, Astronomy and Astrophysics, 630, A85, \href{https://ui.adsabs.harvard.edu/abs/2019A&A...630A..85B/abstract}{ADS Link}, 1 citation
 
+\item Ren, B. et al. ({\bf2019}), {\it An Exo-Kuiper Belt with an Extended Halo around HD 191089 in Scattered Light}, The Astrophysical Journal, 882, 64, \href{https://ui.adsabs.harvard.edu/abs/2019ApJ...882...64R/abstract}{ADS Link}
 
-\begin{etaremune}
-\item Fogarty, K., \textbf{Mazoyer, J.}, Laurent, K. S., Soummer, R., N’Diaye, M., Stark, C. and Pueyo, L., “\textit{Optimal deformable mirror and pupil apodization combinations for apodized pupil Lyot coronagraphs with obstructed pupils},” Proceedings of the SPIE 10698, 106981J, 19 pages (\textbf{2018}).
-\item Ruane, G., Riggs, A., \textbf{Mazoyer, J.}, Por, E. H., N’Diaye, M., Huby, E., Baudoz, P., Galicher, R., Douglas, E., Knight, J., Carlomagno, B., Fogarty, K., Pueyo, L., Zimmerman, N., Absil, O., Beaulieu, M., Cady, E., Carlotti, A., Doelman, D., et al., “\textit{Review of high-contrast imaging systems for current and future ground- and space-based telescopes I: coronagraph design methods and optical performance metrics},” Proceedings of the SPIE 10698, 106982S, 20 pages (\textbf{2018}).
-\item Jovanovic, N., Absil, O., Baudoz, P., Beaulieu, M., Bottom, M., Cady, E., Carlomagno, B., Carlotti, A., Doelman, D., Fogarty, K., Galicher, R., Guyon, O., Haffert, S., Huby, E., Jewell, J., Keller, C., Kenworthy, M. A., Knight, J., Kühn, J., Kelsey, M., \textbf{Mazoyer, J.}, et al., “\textit{Review of high-contrast imaging systems for current and future ground-based and space-based telescopes: Part II. Common path wavefront sensing/control and coherent differential imaging},” Proceedings of the SPIE 10703, 107031U, 19 pages (\textbf{2018}).
-\item Laurent, K. S., Fogarty, K., Zimmerman, N. T., N’Diaye, M., Stark, C. C., \textbf{Mazoyer, J.}, Sivaramakrishnan, A., Pueyo, L., Shaklan, S., Vanderbei, R. and Soummer, R., “\textit{Apodized pupil Lyot coronagraphs designs for future segmented space telescopes},” Proceedings of the SPIE 10698, 106982W, 18 pages (\textbf{2018}).
-\item Leboulleux, L., Pueyo, L., Sauvage, J.-F., Fusco, T., \textbf{Mazoyer, J.}, Sivaramakrishnan, A., N’Diaye, M. and Soummer, R., “\textit{Sensitivity analysis for high-contrast imaging with segmented space telescopes},” Proceedings of the SPIE 10698, 106986H, 16 pages (\textbf{2018}).
-\item N’Diaye, M., Fogarty, K., Soummer, R., Carlotti, A., Dohlen, K., \textbf{Mazoyer}, J., Pueyo, L., Laurent, K. S. and Zimmerman, N., “\textit{Apodized Pupil Lyot coronagraphs with arbitrary aperture telescopes: novel designs using hybrid focal plane masks},” Proceedings of the SPIE 10698, 106986A, 11 pages (\textbf{2018}).
-\item Snik, F., Absil, O., Baudoz, P., Beaulieu, M., Bendek, E., Cady, E., Carlomagno, B., Carlotti, A., Cvetojevic, N., Doelman, D., Fogarty, K., Galicher, R., Guyon, O., Haffert, S., Huby, E., Jewell, J., Jovanovic, N., Keller, C., Kenworthy, M. A.,  Knight, J., Kuhn, J., \textbf{Mazoyer, J.} et al., “\textit{Review of high-contrast imaging systems for current and future ground-based and space-based telescopes III: technology opportunities and pathways},” Proceedings of the SPIE 10706, 107062L, 16 pages (\textbf{2018}).
-\item Soummer, R., Brady, G. R., Brooks, K., Comeau, T., Choquet, É., Dillon, T., Egron, S., Gontrum, R., Hagopian, J., Laginja, I., Leboulleux, L., Perrin, M. D., Petrone, P., Pueyo, L., \textbf{Mazoyer, J.}, N’Diaye, M., Riggs, A. J. E., Shiri, R., Sivaramakrishnan, A., et al., “\textit{High-contrast imager for complex aperture telescopes (HiCAT): 5. first results with segmented-aperture coronagraph and wavefront control},” Proceedings of the SPIE 10698, 106981O, 16 pages (\textbf{2018}).
-\item Pueyo, L., Zimmerman, N., Bolcar, M., Groff, T., Stark, C., Ruane, G., Jewell, J., Soummer, R., St. Laurent, K., Wang, J., Redding, D., \textbf{Mazoyer, J.}, Fogarty, K., Juanola-Parramon, R., Domagal-Goldman, S., Roberge, A., Guyon, O. and Mandell, A., “\textit{The LUVOIR architecture ‘A’ coronagraph instrument},” Proceedings of the SPIE 0398, 103980F, 20 pages (\textbf{2017}).
-\item Fogarty, K., Pueyo, L., \textbf{Mazoyer, J.} and N’Diaye, M., “\textit{Polynomial apodized vortex coronagraphs for obscured telescope pupils},” Proceedings of the SPIE 10400, 104000T, International Society for Optics and Photonics, 17 pages (\textbf{2017}).
-\item Egron, S., Soummer, R., Lajoie, C.-P., Bonnefois, A., Long, J., Michau, V., Choquet, E., Ferrari, M., Leboulleux, L., Levecq, O., \textbf{Mazoyer, J.}, N’Diaye, M., Perrin, M., Petrone, P., Pueyo, L. and Sivaramakrishnan, A., “\textit{James Webb Space Telescope optical simulation testbed IV: linear control alignment of the primary segmented mirror},” Proceedings of the SPIE 0398, 1039811, 9 pages (\textbf{2017}).
-\item Leboulleux, L., N’Diaye, M., \textbf{Mazoyer, J.}, Pueyo, L., Perrin, M., Egron, S., Choquet, E., Sauvage, J.-F., Fusco, T. and Soummer, R., “\textit{Comparison of wavefront control algorithms and first results on the high-contrast imager for complex aperture telescopes (hicat) testbed},” Proceedings of the SPIE 10562, 105622Z, International Conference on Space Optics (\textbf{2017}).
-\item Leboulleux, L., N’Diaye, M., Riggs, A. J. E., Egron, S., \textbf{Mazoyer, J.}, Pueyo, L., Choquet, E., Perrin, M. D., Kasdin, J., Sauvage, J.-F., Fusco, T. and Soummer, R., “\textit{High-contrast imager for Complex Aperture Telescopes (HiCAT). 4. Status and wavefront control development},” Proceedings of the SPIE 9904, 99043C, 13 pages (\textbf{2016}).
-\item N’Diaye, M., \textbf{Mazoyer, J.}, Choquet, É., Pueyo, L., Perrin, M. D., Egron, S., Leboulleux, L., Levecq, O., Carlotti, A., Long, C. A., Lajoie, R. and Soummer, R., “\textit{High-contrast imager for complex aperture telescopes (HiCAT): 3. first lab results with wavefront control},” Proceedings of the SPIE 9605, 96050I, 12 pages (\textbf{2015}).
-\item Galicher, R., Baudoz, P., Delorme, J. R., \textbf{Mazoyer, J.}, Rousset, G., Firminy, J., Boussaha, F., N’Diaye, M., Dohlen, K. and Caillat, A., “\textit{High contrast imaging on the THD bench: progress and upgrades},” Proceedings of the SPIE 9143, 91435A, 11 pages (\textbf{2014}).
-\item Delorme, J. R., Galicher, R., Baudoz, P., Rousset, G., \textbf{Mazoyer, J.}, N’Diaye, M., Dohlen, K. and Caillat, A., “\textit{High-contrast imaging in wide spectral band with a self-coherent camera and achromatic coronagraphs,}” Proceedings of the SPIE 9151, 91515Q, 12 pages (\textbf{2014}).
-\item Galicher, R., \textbf{Mazoyer, J.}, Baudoz, P. and Rousset, G., “\textit{High-contrast imaging with a self-coherent camera},” Proceedings of the SPIE 8864, 88640M, 11 pages (\textbf{2013}).
-\item Galicher, R., Delorme, J. R., Baudoz, P. and \textbf{Mazoyer, J.}, “\textit{Focal Plane Wavefront Sensing with a self-coherent camera},” Proceedings of the Third AO4ELT Conference, 123, 7 pages (\textbf{2013}).
-\item Baudoz, P., \textbf{Mazoyer, J.} and Galicher, R., “\textit{Laboratory tests of planet signal extraction in high contrast images},” Proceedings of the Third AO4ELT Conference, 109, 8 pages (\textbf{2013}).
-\item Mas, M., Baudoz, P., \textbf{Mazoyer, J.}, Galicher, R. and Rousset, G., “\textit{Experimental results on wavefront correction using the self-coherent camera},” Proceedings of the SPIE 8446, 844689, 12 pages (\textbf{2012}).
-\item Baudoz, P., \textbf{Mazoyer, J.}, Mas, M., Galicher, R. and Rousset, G., “\textit{Dark hole and planet detection: laboratory results using the self-coherent camera},” Proceedings of the SPIE 8446, 84468C, 11 pages (\textbf{2012}).
-\item Gasnault, O., \textbf{Mazoyer, J.}, Cousin, A., Meslin, P.-Y., Lasue, J., Lacour, J.-L., Ollila, A., Berger, G., Forni, O., Maurice, S., Wiens, R.-C., Clegg, S. and Blank, J., “\textit{Deciphering Sample and Atmospheric Oxygen Contents with ChemCam on Mars},” 43rd Lunar and Planetary Science Conference 43, 2888, 2 pages (\textbf{2012}).
+\item Stark, C. C. et al. ({\bf2019}), {\it ExoEarth yield landscape for future direct imaging space telescopes}, Journal of Astronomical Telescopes, Instruments, and Systems, 5, 024009, \href{https://ui.adsabs.harvard.edu/abs/2019JATIS...5b4009S/abstract}{ADS Link}
+
+\item Engler, N. et al. ({\bf2019}), {\it Investigating the presence of two belts in the HD 15115 system}, Astronomy and Astrophysics, 622, A192, \href{https://ui.adsabs.harvard.edu/abs/2019A&A...622A.192E/abstract}{ADS Link}, 5 citations
+
+\item Esposito, T. M. et al. ({\bf2018}), {\it Direct Imaging of the HD 35841 Debris Disk: A Polarized Dust Ring from Gemini Planet Imager and an Outer Halo from HST/STIS}, The Astronomical Journal, 156, 47, \href{https://ui.adsabs.harvard.edu/abs/2018AJ....156...47E/abstract}{ADS Link}, 2 citations
+
+\item Leboulleux, L. et al. ({\bf2018}), {\it Pair-based Analytical model for Segmented Telescopes Imaging from Space for sensitivity analysis}, Journal of Astronomical Telescopes, Instruments, and Systems, 4, 035002, \href{https://ui.adsabs.harvard.edu/abs/2018JATIS...4c5002L/abstract}{ADS Link}, 2 citations
+
+\item Poteet, C. A. et al. ({\bf2018}), {\it Space-based Coronagraphic Imaging Polarimetry of the TW Hydrae Disk: Shedding New Light on Self-shadowing Effects}, The Astrophysical Journal, 860, 115, \href{https://ui.adsabs.harvard.edu/abs/2018ApJ...860..115P/abstract}{ADS Link}, 3 citations
+
+\item Jensen-Clem, R. et al. ({\bf2018}), {\it A New Standard for Assessing the Performance of High Contrast Imaging Systems}, The Astronomical Journal, 155, 19, \href{https://ui.adsabs.harvard.edu/abs/2018AJ....155...19J/abstract}{ADS Link}, 12 citations
+
+\item Fogarty, K. et al. ({\bf2017}), {\it Polynomial Apodizers for Centrally Obscured Vortex Coronagraphs}, The Astronomical Journal, 154, 240, \href{https://ui.adsabs.harvard.edu/abs/2017AJ....154..240F/abstract}{ADS Link}, 6 citations
+
+\item Perrot, C. et al. ({\bf2016}), {\it Discovery of concentric broken rings at sub-arcsec separations in the HD 141569A gas-rich, debris disk with VLT/SPHERE}, Astronomy and Astrophysics, 590, L7, \href{https://ui.adsabs.harvard.edu/abs/2016A&A...590L...7P/abstract}{ADS Link}, 18 citations
+
+\item Delorme, J. R. et al. ({\bf2016}), {\it Focal plane wavefront sensor achromatization: The multireference self-coherent camera}, Astronomy and Astrophysics, 588, A136, \href{https://ui.adsabs.harvard.edu/abs/2016A&A...588A.136D/abstract}{ADS Link}, 9 citations
+
+\item Choquet, É. et al. ({\bf2016}), {\it First Images of Debris Disks around TWA 7, TWA 25, HD 35650, and HD 377}, The Astrophysical Journal, 817, L2, \href{https://ui.adsabs.harvard.edu/abs/2016ApJ...817L...2C/abstract}{ADS Link}, 39 citations
+
+\item Debes, J. H. et al. ({\bf2016}), {\it Wide-Field Infrared Survey Telescope-Astrophysics Focused Telescope Assets coronagraphic operations: lessons learned from the Hubble Space Telescope and the James Webb Space Telescope}, Journal of Astronomical Telescopes, Instruments, and Systems, 2, 011010, \href{https://ui.adsabs.harvard.edu/abs/2016JATIS...2a1010D/abstract}{ADS Link}, 9 citations
+
+\item Wiens, R. C. et al. ({\bf2013}), {\it Pre-flight calibration and initial data processing for the ChemCam laser-induced breakdown spectroscopy instrument on the Mars Science Laboratory rover}, Spectrochimica Acta, 82, 1, \href{https://ui.adsabs.harvard.edu/abs/2013AcSpe..82....1W/abstract}{ADS Link}, 117 citations
+
+\item Cousin, A. et al. ({\bf2011}), {\it Laser induced breakdown spectroscopy library for the Martian environment}, Spectrochimica Acta, 66, 805, \href{https://ui.adsabs.harvard.edu/abs/2011AcSpe..66..805C/abstract}{ADS Link}, 39 citations
+
 \end{etaremune}
+
+
+\vspace{-0.8cm}
+\textcolor{RoyalBlue}{\section{ACTES DE CONFÉRENCE MAJEURS}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+\begin{etaremune}\itemsep 0pt
+\item Fogarty, K. ; {\bf Mazoyer, J.} ; St. Laurent, K. et al. ({\bf2018}), {\it Optimal deformable mirror and pupil apodization combinations for apodized pupil Lyot coronagraphs with obstructed pupils}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106981J, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..1JF/abstract}{ADS Link}
+
+\item Ruane, G. ; Riggs, A. ; {\bf Mazoyer, J.} et al. ({\bf2018}), {\it Review of high-contrast imaging systems for current and future ground- and space-based telescopes I: coronagraph design methods and optical performance metrics}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106982S, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..2SR/abstract}{ADS Link}
+
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; N'Diaye, M. et al. ({\bf2017}), {\it Capabilities of ACAD-OSM, an active method for the correction of aperture discontinuities}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10400, 104000G, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10400...0GM/abstract}{ADS Link}, 2 citations
+
+\item {\bf Mazoyer, J.} ; Pueyo, L. ({\bf2017}), {\it Fundamental limits to high-contrast wavefront control}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10400, 1040014, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10400E..14M/abstract}{ADS Link}, 1 citation
+
+\item Leboulleux, L. ; N'Diaye, M. ; {\bf Mazoyer, J.} et al. ({\bf2017}), {\it Comparison of wavefront control algorithms and first results on the high-contrast imager for complex aperture telescopes (hicat) testbed}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10562, 105622Z, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10562E..2ZL/abstract}{ADS Link}
+
+\item Fogarty, K. ; Pueyo, L. ; {\bf Mazoyer, J.} et al. ({\bf2017}), {\it Tip/tilt optimizations for polynomial apodized vortex coronagraphs on obscured telescope pupils}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10400, 104000T, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10400E..0TF/abstract}{ADS Link}, 2 citations
+
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; N'Diaye, M. et al. ({\bf2016}), {\it Correcting for the effects of pupil discontinuities with the ACAD method}, Space Telescopes and Instrumentation 2016: Optical, Infrared, and Millimeter Wave, 9904, 99044T, \href{https://ui.adsabs.harvard.edu/abs/2016SPIE.9904E..4TM/abstract}{ADS Link}
+
+\item {\bf Mazoyer, J.} ; Pueyo, L. ; Norman, C. et al. ({\bf2015}), {\it Active correction of aperture discontinuities (ACAD) for space telescope pupils: a parametic analysis}, Techniques and Instrumentation for Detection of Exoplanets VII, 9605, 96050M, \href{https://ui.adsabs.harvard.edu/abs/2015SPIE.9605E..0MM/abstract}{ADS Link}, 8 citations
+
+\item N'Diaye, M. ; {\bf Mazoyer, J.} ; Choquet, É. et al. ({\bf2015}), {\it High-contrast imager for complex aperture telescopes (HiCAT): 3. first lab results with wavefront control}, Techniques and Instrumentation for Detection of Exoplanets VII, 9605, 96050I, \href{https://ui.adsabs.harvard.edu/abs/2015SPIE.9605E..0IN/abstract}{ADS Link}, 7 citations
+
+\item {\bf Mazoyer, J.} ; Boccaletti, A. ; Augereau, J. -C. et al. ({\bf2014}), {\it Is the HD 15115 circumstellar disk really asymmetrical?}, Thirty years of Beta Pic and Debris Disks Studies, 47, \href{https://ui.adsabs.harvard.edu/abs/2014tybp.confE..47M/abstract}{ADS Link}
+
+\item {\bf Mazoyer, J.} ; Galicher, R. ; Baudoz, P. et al. ({\bf2014}), {\it Deformable mirror interferometric analysis for the direct imagery of exoplanets}, Adaptive Optics Systems IV, 9148, 914846, \href{https://ui.adsabs.harvard.edu/abs/2014SPIE.9148E..46M/abstract}{ADS Link}, 1 citation
+
+\item {\bf Mazoyer, J.} ; Baudoz, P. ; Galicher, R. et al. ({\bf2013}), {\it Direct detection of exoplanets in polychromatic light with a Self-coherent camera}, Proceedings of the Third AO4ELT Conference, 97, \href{https://ui.adsabs.harvard.edu/abs/2013aoel.confE..97M/abstract}{ADS Link}
+
+\item Baudoz, P. ; {\bf Mazoyer, J.} ; Galicher, R. ({\bf2013}), {\it Laboratory tests of planet signal extraction in high contrast images}, Proceedings of the Third AO4ELT Conference, 109, \href{https://ui.adsabs.harvard.edu/abs/2013aoel.confE.109B/abstract}{ADS Link}, 1 citation
+
+\item {\bf Mazoyer, J.} ; Galicher, R. ; Baudoz, P. et al. ({\bf2013}), {\it Speckle correction in polychromatic light with the self-coherent camera for the direct detection of exoplanets}, Techniques and Instrumentation for Detection of Exoplanets VI, 8864, 88640N, \href{https://ui.adsabs.harvard.edu/abs/2013SPIE.8864E..0NM/abstract}{ADS Link}, 1 citation
+
+\item Galicher, R. ; {\bf Mazoyer, J.} ; Baudoz, P. et al. ({\bf2013}), {\it High-contrast imaging with a self-coherent camera}, Techniques and Instrumentation for Detection of Exoplanets VI, 8864, 88640M, \href{https://ui.adsabs.harvard.edu/abs/2013SPIE.8864E..0MG/abstract}{ADS Link}
+
+\item Baudoz, P. ; {\bf Mazoyer, J.} ; Mas, M. et al. ({\bf2012}), {\it Dark hole and planet detection: laboratory results using the self-coherent camera}, Ground-based and Airborne Instrumentation for Astronomy IV, 8446, 84468C, \href{https://ui.adsabs.harvard.edu/abs/2012SPIE.8446E..8CB/abstract}{ADS Link}, 8 citations
+
+\item Mas, M. ; Baudoz, P. ; {\bf Mazoyer, J.} et al. ({\bf2012}), {\it Experimental results on wavefront correction using the self-coherent camera}, Ground-based and Airborne Instrumentation for Astronomy IV, 8446, 844689, \href{https://ui.adsabs.harvard.edu/abs/2012SPIE.8446E..89M/abstract}{ADS Link}, 4 citations
+
+\item {\bf Mazoyer, J.} ; Baudoz, P. ; Mas, M. et al. ({\bf2012}), {\it Experimental parametric study of the self-coherent camera}, Space Telescopes and Instrumentation 2012: Optical, Infrared, and Millimeter Wave, 8442, 844250, \href{https://ui.adsabs.harvard.edu/abs/2012SPIE.8442E..50M/abstract}{ADS Link}, 2 citations
+
+\item Gasnault, O. ; {\bf Mazoyer, J.} ; Cousin, A. et al. ({\bf2012}), {\it Deciphering Sample and Atmospheric Oxygen Contents with ChemCam on Mars}, Lunar and Planetary Science Conference, 2888, \href{https://ui.adsabs.harvard.edu/abs/2012LPI....43.2888G/abstract}{ADS Link}, 1 citation
+
+\end{etaremune}
+
+
+\vspace{-0.8cm}
+\textcolor{RoyalBlue}{\section{AUTRES ACTES DE CONFÉRENCE}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+\begin{etaremune}\itemsep 0pt
+\item Fogarty, K. et al. ({\bf2018}), {\it Optimal deformable mirror and pupil apodization combinations for apodized pupil Lyot coronagraphs with obstructed pupils}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106981J, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..1JF/abstract}{ADS Link}
+
+\item Ruane, G. et al. ({\bf2018}), {\it Review of high-contrast imaging systems for current and future ground- and space-based telescopes I: coronagraph design methods and optical performance metrics}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106982S, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..2SR/abstract}{ADS Link}
+
+\item N'Diaye, M. et al. ({\bf2018}), {\it Apodized Pupil Lyot coronagraphs with arbitrary aperture telescopes: novel designs using hybrid focal plane masks}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106986A, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..6AN/abstract}{ADS Link}
+
+\item Soummer, R. et al. ({\bf2018}), {\it High-contrast imager for complex aperture telescopes (HiCAT): 5. first results with segmented-aperture coronagraph and wavefront control}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106981O, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..1OS/abstract}{ADS Link}
+
+\item Snik, F. et al. ({\bf2018}), {\it Review of high-contrast imaging systems for current and future ground-based and space-based telescopes III: technology opportunities and pathways}, Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation III, 10706, 107062L, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10706E..2LS/abstract}{ADS Link}
+
+\item St. Laurent, K. et al. ({\bf2018}), {\it Apodized pupil Lyot coronagraphs designs for future segmented space telescopes}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106982W, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..2WS/abstract}{ADS Link}
+
+\item Jovanovic, N. et al. ({\bf2018}), {\it Review of high-contrast imaging systems for current and future ground-based and space-based telescopes: Part II. Common path wavefront sensing/control and coherent differential imaging}, Adaptive Optics Systems VI, 10703, 107031U, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10703E..1UJ/abstract}{ADS Link}, 2 citations
+
+\item Leboulleux, L. et al. ({\bf2018}), {\it Sensitivity analysis for high-contrast imaging with segmented space telescopes}, Space Telescopes and Instrumentation 2018: Optical, Infrared, and Millimeter Wave, 10698, 106986H, \href{https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..6HL/abstract}{ADS Link}
+
+\item Leboulleux, L. et al. ({\bf2017}), {\it Comparison of wavefront control algorithms and first results on the high-contrast imager for complex aperture telescopes (hicat) testbed}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10562, 105622Z, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10562E..2ZL/abstract}{ADS Link}
+
+\item Fogarty, K. et al. ({\bf2017}), {\it Tip/tilt optimizations for polynomial apodized vortex coronagraphs on obscured telescope pupils}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10400, 104000T, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10400E..0TF/abstract}{ADS Link}, 2 citations
+
+\item Egron, S. et al. ({\bf2017}), {\it James Webb Space Telescope optical simulation testbed IV: linear control alignment of the primary segmented mirror}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10398, 1039811, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10398E..11E/abstract}{ADS Link}
+
+\item Pueyo, L. et al. ({\bf2017}), {\it The LUVOIR architecture ''A'' coronagraph instrument}, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 10398, 103980F, \href{https://ui.adsabs.harvard.edu/abs/2017SPIE10398E..0FP/abstract}{ADS Link}, 5 citations
+
+\item Leboulleux, L. et al. ({\bf2016}), {\it High-contrast imager for Complex Aperture Telescopes (HiCAT). 4. Status and wavefront control development}, Space Telescopes and Instrumentation 2016: Optical, Infrared, and Millimeter Wave, 9904, 99043C, \href{https://ui.adsabs.harvard.edu/abs/2016SPIE.9904E..3CL/abstract}{ADS Link}
+
+\item N'Diaye, M. et al. ({\bf2015}), {\it High-contrast imager for complex aperture telescopes (HiCAT): 3. first lab results with wavefront control}, Techniques and Instrumentation for Detection of Exoplanets VII, 9605, 96050I, \href{https://ui.adsabs.harvard.edu/abs/2015SPIE.9605E..0IN/abstract}{ADS Link}, 7 citations
+
+\item Galicher, R. et al. ({\bf2014}), {\it High contrast imaging on the THD bench: progress and upgrades}, Space Telescopes and Instrumentation 2014: Optical, Infrared, and Millimeter Wave, 9143, 91435A, \href{https://ui.adsabs.harvard.edu/abs/2014SPIE.9143E..5AG/abstract}{ADS Link}, 1 citation
+
+\item Delorme, J. R. et al. ({\bf2014}), {\it High-contrast imaging in wide spectral band with a self-coherent camera and achromatic coronagraphs}, Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation, 9151, 91515Q, \href{https://ui.adsabs.harvard.edu/abs/2014SPIE.9151E..5QD/abstract}{ADS Link}, 1 citation
+
+\item Galicher, R. et al. ({\bf2013}), {\it Focal Plane Wavefront Sensing with a self-coherent camera}, Proceedings of the Third AO4ELT Conference, 123, \href{https://ui.adsabs.harvard.edu/abs/2013aoel.confE.123G/abstract}{ADS Link}
+
+\item Baudoz, P. et al. ({\bf2013}), {\it Laboratory tests of planet signal extraction in high contrast images}, Proceedings of the Third AO4ELT Conference, 109, \href{https://ui.adsabs.harvard.edu/abs/2013aoel.confE.109B/abstract}{ADS Link}, 1 citation
+
+\item Galicher, R. et al. ({\bf2013}), {\it High-contrast imaging with a self-coherent camera}, Techniques and Instrumentation for Detection of Exoplanets VI, 8864, 88640M, \href{https://ui.adsabs.harvard.edu/abs/2013SPIE.8864E..0MG/abstract}{ADS Link}
+
+\item Baudoz, P. et al. ({\bf2012}), {\it Dark hole and planet detection: laboratory results using the self-coherent camera}, Ground-based and Airborne Instrumentation for Astronomy IV, 8446, 84468C, \href{https://ui.adsabs.harvard.edu/abs/2012SPIE.8446E..8CB/abstract}{ADS Link}, 8 citations
+
+\item Mas, M. et al. ({\bf2012}), {\it Experimental results on wavefront correction using the self-coherent camera}, Ground-based and Airborne Instrumentation for Astronomy IV, 8446, 844689, \href{https://ui.adsabs.harvard.edu/abs/2012SPIE.8446E..89M/abstract}{ADS Link}, 4 citations
+
+\item Gasnault, O. et al. ({\bf2012}), {\it Deciphering Sample and Atmospheric Oxygen Contents with ChemCam on Mars}, Lunar and Planetary Science Conference, 2888, \href{https://ui.adsabs.harvard.edu/abs/2012LPI....43.2888G/abstract}{ADS Link}, 1 citation
+
+\end{etaremune}
+
+
+\textcolor{RoyalBlue}{\section{ASTRO2020 DECADAL SURVEY}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+\subsection*{Mission Concept Reports}
+\begin{itemize}\itemsep 0pt
+\item The LUVOIR Team (2019) {\it The LUVOIR Mission Concept Study Final Report} (Additional Contributing Scientist), \href{https://asd.gsfc.nasa.gov/luvoir/reports/}{NASA GSFC Link}
+\item HabEx Study Team (2019) {\it The HabEx Mission Concept Study Final Report} (Additional Contributing Scientist), \href{https://www.jpl.nasa.gov/habex/}{NASA JPL Link}
+\end{itemize}
+
+\subsection*{Astro2020 White Papers}
+\begin{etaremune}\itemsep 0pt
+\item {\bf Mazoyer, J.} et al. ({\bf2019}), {\it High-Contrast Testbeds for Future Space-Based Direct Imaging Exoplanet Missions}, Bulletin of the American Astronomical Society, 51, 101, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51g.101M/abstract}{ADS Link}
+
+\item Pueyo, L. et al. ({\bf2019}), {\it Wavefront Sensing and Control technologies for Exo-Earth imaging}, Bulletin of the American Astronomical Society, 51, 215, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51g.215P/abstract}{ADS Link}
+
+\item Shaklan, S. et al. ({\bf2019}), {\it Status of Space-based Segmented-Aperture Coronagraphs for Characterizing Exo-Earths Around Sun-Like Stars}, Bulletin of the American Astronomical Society, 51, 211, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51g.211S/abstract}{ADS Link}
+
+\item Chen, C. et al. ({\bf2019}), {\it Debris Disk Composition: A Diagnostic Tool for Planet Formation and Migration}, Bulletin of the American Astronomical Society, 51, 342, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51c.342C/abstract}{ADS Link}
+
+\item Debes, J. et al. ({\bf2019}), {\it Cold Debris Disks as Strategic Targets for the 2020s}, Bulletin of the American Astronomical Society, 51, 566, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51c.566D/abstract}{ADS Link}
+
+\item Stark, C. et al. ({\bf2019}), {\it Optimal Architectures and Survey Designs for Maximizing the Yields of Direct-Imaging Exoplanet Missions}, Bulletin of the American Astronomical Society, 51, 511, \href{https://ui.adsabs.harvard.edu/abs/2019BAAS...51c.511S/abstract}{ADS Link}
+
+\end{etaremune}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %%%%% 3rd page
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.8cm}
-\textcolor{RoyalBlue}{\section{\large PRÉSENTATIONS}
-\vspace{-0.2cm}\hrule}
-\vspace{0.4cm}
+\newpage
+\textcolor{White}{.}
+%\lhead{\textcolor{Gray}{J. MAZOYER}}
+\vspace{-1.5cm}
+\begin{center}
+\begin{LARGE}
+\textbf{Liste des présentations}\\
+\end{LARGE}
+\end{center}
+\setcounter{section}{0}
 
-\textcolor{RoyalBlue}{\subsection{\large PRÉSENTATIONS INVITÉES}}
+\vspace{-0.8cm}
+\textcolor{RoyalBlue}{\section{PRÉSENTATIONS INVITÉES}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+
 
 \begin{etaremune}
 \item ``Active correction of aperture discontinuities and observation of circumstellar debris disks with GPI", IPAC seminar, Pasadena, FR \textbf{Avr. 2019}
@@ -631,7 +667,10 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2012SPI
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\subsection{\large CONFÉRENCES ET ATELIERS INTERNATIONAUX}}
+\textcolor{RoyalBlue}{\section{CONFÉRENCES ET ATELIERS INTERNATIONAUX}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
+
 
 \begin{etaremune}
 
@@ -671,7 +710,9 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2012SPI
 \end{etaremune}
 
 \vspace{-0.8cm}
-\textcolor{RoyalBlue}{\subsection{\large SÉMINAIRES}}
+\textcolor{RoyalBlue}{\section{SÉMINAIRES}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
 
 \begin{etaremune}
 \item NASA's Goddard Space Flight Center seminar, MD, US. ``A new active method to correct for the effects of complex apertures on coronagraph performance" \textbf{Jan. 2017}
@@ -706,7 +747,11 @@ Link: \textcolor{BrickRed}{\underline{\url{http://adsabs.harvard.edu/abs/2012SPI
 
 \textcolor{RoyalBlue}{\Large{\bf + 9 posters en conférences internationales}}
 
-\textcolor{RoyalBlue}{\subsection{\large PRÉSENTATIONS GRAND PUBLIC}}
+
+\vspace{-0.8cm}
+\textcolor{RoyalBlue}{\section{PRÉSENTATIONS GRAND PUBLIC}
+\vspace{-0.25cm}\hrule}
+\vspace{0.6cm}
 
 \begin{enumerate}\itemsep 3pt
 \item[$\bullet$]  ``Extremely Large Telescopes : des cathédrales pour l'astronomie". CERN, Genève, Suisse \textbf{Août 2014}.
