@@ -12,8 +12,7 @@
 % \graphicspath{‎{}}
 
 \usepackage{datetime}
-\newdateformat{monthyeardate}{%
-  \monthname[\THEMONTH], \THEYEAR}
+\newdateformat{yeardate}{ \THEYEAR}
 
 
 \usepackage[framemethod=tikz]{mdframed}
@@ -53,7 +52,7 @@ innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
 
 \begin{document}
 \lhead[]{}
-\lfoot{\textcolor{Gray}{CV last update: \monthyeardate\today}}
+\lfoot{\textcolor{Gray}{CV last update: \yeardate\today}}
 % \textcolor{white}{.}
 % \vspace{-1.cm}
 
